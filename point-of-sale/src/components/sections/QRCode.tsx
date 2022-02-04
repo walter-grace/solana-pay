@@ -10,7 +10,7 @@ export const QRCode: FC = () => {
     const size = useMemo(() => (phone && typeof window !== 'undefined' ? window.screen.availWidth - 48 : 400), [phone]);
     const { theme } = useTheme();
     const [background, color] = useMemo(
-        () => (theme === 'light' ? ['#eff2f3', '#2a2a2a'] : ['#2a2a2a', '#eef5f6']),
+        () => (theme === 'light' ? ['#eff2f3', '#2a2a2a'] : ['black', 'white']),
         [theme]
     );
     const { url } = usePayment();
