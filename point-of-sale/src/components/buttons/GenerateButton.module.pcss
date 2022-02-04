@@ -2,17 +2,19 @@
     margin: 32px auto;
     padding: 12px 24px;
     border: 0;
-    border-radius: 8px;
+    border-radius: 16px;
     display: block;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 24px;
     font-weight: 500;
     cursor: pointer;
+    background-color: Chartreuse;
+    color:blue;
 }
 
 .root[disabled] {
     cursor: default;
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 :global(html.light) .root {
@@ -20,7 +22,4 @@
     color: var(--theme-light-button-color);
 }
 
-:global(html.dark) .root {
-    background: var(--theme-dark-button-background);
-    color: var(--theme-dark-button-color);
-}
+

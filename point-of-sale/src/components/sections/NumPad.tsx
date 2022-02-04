@@ -4,6 +4,7 @@ import { useConfig } from '../../hooks/useConfig';
 import { usePayment } from '../../hooks/usePayment';
 import { Digits } from '../../types';
 import { BackspaceIcon } from '../images/BackspaceIcon';
+import nft from './nico.jpg'
 import * as css from './NumPad.module.pcss';
 
 interface NumPadInputButton {
@@ -44,6 +45,7 @@ export const NumPad: FC = () => {
 
     return (
         <div className={css.root}>
+            <div className= "body" >
             <div className={css.text}>Enter amount in {symbol}</div>
             <div className={css.value}>{value}</div>
             <div className={css.buttons}>
@@ -70,6 +72,21 @@ export const NumPad: FC = () => {
                     </button>
                 </div>
             </div>
+        </div>
+        <hr />
+        <h1
+        style={{
+            textAlign: 'center'
+        }}
+        >
+        NFT For Sale
+        </h1>
+        <br/>
+        <img
+        src={nft}
+        >
+
+        </img>
         </div>
     );
 };

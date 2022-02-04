@@ -7,6 +7,7 @@ import { Transaction, useTransactions } from '../../hooks/useTransactions';
 import { NON_BREAKING_SPACE } from '../../utils/constants';
 import { Amount } from './Amount';
 import * as css from './Transactions.module.pcss';
+import nft from './nico1.jpg'
 
 export const Transactions: FC = () => {
     const { transactions } = useTransactions();
@@ -41,6 +42,10 @@ const Transaction: FC<{ transaction: Transaction }> = ({ transaction }) => {
     }, [getTime]);
 
     return (
+        <div>
+        <h2>
+            Customer
+        </h2>
         <div className={css.transaction}>
             <div className={css.icon}>{icon}</div>
             <div className={css.left}>
@@ -48,12 +53,29 @@ const Transaction: FC<{ transaction: Transaction }> = ({ transaction }) => {
                     <Amount amount={amount} showZero />
                     {NON_BREAKING_SPACE + symbol}
                 </div>
+                <div>
+                    <h6>
+                        Transaction ID
+                    </h6>
+                </div>
                 <div className={css.signature}>{signature}</div>
             </div>
             <div className={css.right}>
                 <div className={css.time}>{time}</div>
                 <div className={clsx(css.status, css[`status-${transaction.status}`])}>{transaction.status}</div>
             </div>
+            <br />
+            <div
+            style={{
+                textAlign: 'center'
+            }}
+            >
+            <img
+                src={nft}
+                >
+            </img>
+        </div>
+        </div>
         </div>
     );
 };
